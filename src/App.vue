@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Post :posts="post" />
    
   </div>
 </template>
@@ -34,8 +35,20 @@ export default {
         },
       ]
     }
+  },
+    methods: {
+    Changed(e) {
+      this.posts.map(function (post) {
+        if (post.title != e.original) {
+          return post
+        }
+        post.title = e.new.title
+        return post
+      })
+    }
+      }
   }
-}
+
 </script>
 
 <style>
