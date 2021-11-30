@@ -1,4 +1,4 @@
-# [Solti Soma]
+# Solti Soma
 
 ## Hogyan kezdj neki?
 
