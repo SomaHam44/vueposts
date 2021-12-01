@@ -28,13 +28,19 @@ export default {
         },
         Save() {
             this.edit = false
-            this.$emit('post-item-changed',{
+            this.$emit('post-title-changed',{
                 original: this.post,
                 new: 
                 {
                     title : this.title
                     
                 },
+            }),
+            this.$emit('post-body-changed', {
+                original: this.post,
+                new: {
+                    body: this.body,
+                }
             })
         }
     }
