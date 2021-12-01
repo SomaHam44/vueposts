@@ -39,7 +39,7 @@ export default {
     methods: {
     Changed(e) {
       this.posts.map(function (post) {
-        if (post.title != e.original) {
+        if (post.title != e.original.title) {
           return post
         }
         post.title = e.new.title
