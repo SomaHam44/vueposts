@@ -2,6 +2,7 @@
  <li>
       <div v-if="!edit">
   <h2>{{title}}<button @click="Edit">Edit</button></h2>
+  <div>{{body}}</div>
   </div>
   <div v-if="edit">
       <input type="text" v-model="title">

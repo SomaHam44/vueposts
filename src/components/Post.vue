@@ -2,18 +2,11 @@
     <div>
     
         
-        <PostItem
-         />
-        <ul>
-            <li 
-            v-for="post in posts"
-            v-bind:key="post.title" :title="post.title"
-            @post-item-changed="Changed"
-            > {{post.title}}
-            <button>Edit</button></li>
-            </ul>
+    <PostItem
     
-
+            v-for="post in posts"
+            v-bind:key="post.title" :post="post"
+            @post-item-changed="Changed"/>
     </div>
         
     
@@ -30,7 +23,8 @@ export default {
     componenets: {PostItem},
     methods: {
         Changed(e) {
-            this.$emit('post-item-changed', e)
+            this.$emit('post-title-changed', e),
+            this.$emit('post-body-changed', e)
         }
 
 
